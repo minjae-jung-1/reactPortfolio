@@ -13,9 +13,8 @@ import Nav from 'react-bootstrap/Nav'
 
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
-import AboutPage from './pages/HomePage'
-import ContactPage from './pages/HomePage'
-
+import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
 
 //importing all the dependencies
 //import bootstrap and all the bootstrap methods
@@ -39,7 +38,7 @@ class App extends React.Component {
       home: {
         title: "Hello",
         subTitle: "Projects",
-        text: "Checkout my projects below"
+        text: "hi"
       },
       about: {
         title: "About Me",
@@ -68,8 +67,8 @@ class App extends React.Component {
               </Navbar.Collapse>
             </Navbar>
             {/* setting up our routes so that on click it will send them to the correct page */}
-            <Route path="/" exact render={()=> <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle}></HomePage>}></Route>
-            <Route path="/about" exact render={()=> <AboutPage title={this.state.about.title} ></AboutPage>}></Route>
+            <Route path="/" exact render={()=> <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}></HomePage>}></Route>
+            <Route path="/About" exact render={()=> <AboutPage title={this.state.about.title} ></AboutPage>}></Route>
             <Route path="/contact" exact render={()=> <ContactPage title={this.state.contact.title} ></ContactPage>}></Route>
 
             <Footer></Footer>

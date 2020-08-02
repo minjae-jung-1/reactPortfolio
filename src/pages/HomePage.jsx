@@ -1,8 +1,15 @@
 import React from 'react';
 
+import Home from '../components/Home'
+import Carousel from '../components/Carousel'
+
 function Homepage(props){
+    console.log(props)
     return(
-        <p>Homepage Works</p>
+        <div>
+            <Home title={props.title} subTitle={props.subTitle} text={props.text}></Home>
+            <Carousel></Carousel>
+        </div>
     )
 }
 
