@@ -1,9 +1,14 @@
 import React from 'react';
+import Home from '../components/Home'
+import Content from '../components/Content'
 //creating our aboutpage component
 function AboutPage(props){
-    return(
-        <p>Homepage Works</p>
-    )
+  return(
+      <div>
+          <Home title={props.title}></Home>
+          <Content>Hello</Content>
+      </div>
+  )
 }
 
 export default AboutPage
