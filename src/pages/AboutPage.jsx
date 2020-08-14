@@ -6,6 +6,7 @@ function AboutPage(props){
   return(
       <div>
           <Home title={props.title}></Home>
+          <Home subtitle={props.subtitle}></Home>
           <Content>Hello</Content>
       </div>
   )

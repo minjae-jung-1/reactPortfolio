@@ -12,6 +12,7 @@ function Content(props){
                   {props.children}
               </Col>
           </Row>
+          
       </Container>
 
   )
