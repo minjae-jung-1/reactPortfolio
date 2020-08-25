@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import NavbarBrand from 'react-bootstrap/NavbarBrand'
 import './App.css';
 import Nav from 'react-bootstrap/Nav'
 
@@ -36,9 +35,9 @@ class App extends React.Component {
         },
       ],
       home: {
-        title: "Hello",
-        subTitle: "Projects",
-        text: "hi"
+        title: "Welcome ",
+        subTitle: "My work thus far",
+        text: "Always learning more!"
       },
       about: {
         title: "About Me",

@@ -17,8 +17,8 @@ code {
 }
 .xcard-image {
   border-radius: 10px;
-  width: 30px;
-  height: 480px;
+  width: 500px;
+  height: 400px;
   box-shadow: 0px 0px 3px 1px #ccc;
 }
 
@@ -36,4 +36,15 @@ code {
   font-size: 16px;
   margin:0px;
 
+}
+
+
+.success-message {
+    color: turquoise;
+    padding: 10px 15px;
+}
+
+.fail-message {
+  color: rgba(255, 0, 0, 0.863);
+  padding: 10px 15px;
 }

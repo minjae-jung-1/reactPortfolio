@@ -4,6 +4,8 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Home from '../components/Home'
 import Content from '../components/Content'
+import Axios from 'axios'
+
 //creating our contactpage component
 class ContactPage extends React.Component{
   constructor(props){
@@ -18,13 +20,10 @@ class ContactPage extends React.Component{
   }
 
   handleChange = (event) =>{
-    console.log(event)
-    
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked: target.value;
     // gonna set the value if the type of input is chcek box then = to check if not its gonna equal the value
     const name = target.name;
-
     this.setState({
       [name]: value
     })
@@ -32,10 +31,33 @@ class ContactPage extends React.Component{
 
   handleSubmit = (event) =>{
     event.preventDefault();
+    // page gets refreshed if we press the submit button using prevent default we 
+    // prevent the default action and keep the page from refreshing.
 
     this.setState({
       disabled: true
-    })
+    });
+
+    Axios.post('http://localhost:3030/api/email', this.state)
+      .then(res =>{
+        if(res.data.success){
+          this.setState({
+            disabled: false,
+            emailSent: true
+          });
+        }else{
+          this.setState({
+            disabled: false,
+            emailSent: false
+          });
+        }
+      }).catch(err => {
+        this.setState({
+          disabled: false,
+          emailSent: false
+        })
+      })
+    //after we handle the submission, we disable the sending 
   }
   
   render(){

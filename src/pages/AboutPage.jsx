@@ -7,7 +7,7 @@ function AboutPage(props){
       <div>
           <Home title={props.title}></Home>
           <Home subtitle={props.subtitle}></Home>
-          <Content>Hello</Content>
+          <Content>Hello, I am an engineering student who enjoys developing in javascript. I am currently Full-stack and can comfortably work with the MERN stack</Content>
       </div>
   )
 }
